@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Item:</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-container label {
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 5px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Select an Image</h2>
+
+<form id="imageForm" action="/submit" method="post">
+    <div class="image-container">
+        <label>
+            <input type="radio" name="selected_image" value="brownies">
+            <img src="{{ url_for('static', filename='brownies.png') }}">
+            <p>Brownies</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="burgers">
+            <img src="{{ url_for('static', filename='Burgers.jpg') }}">
+            <p>Burgers</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="cereals">
+            <img src="{{ url_for('static', filename='cereals.png') }}">
+            <p>cereals</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="chicken">
+            <img src="{{ url_for('static', filename='chicken.png') }}">
+            <p>Chicken</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="chocolate">
+            <img src="{{ url_for('static', filename='chocolate.png') }}">
+            <p>Chocolate</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="escalope">
+            <img src="{{ url_for('static', filename='escalope.png') }}">
+            <p>escalope</p>
+        </label>
+    </div>
+    <div class="image-container">
+        <label>
+            <input type="radio" name="selected_image" value="fresh bread">
+            <img src="{{ url_for('static', filename='french-bread.jpg') }}">
+            <p>Fresh bread</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="fresh tuna">
+            <img src="{{ url_for('static', filename='fresh tuna.jpg') }}">
+            <p>Fresh tuna</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="fromage blanc">
+            <img src="{{ url_for('static', filename='fromage blanc.jpeg') }}">
+            <p>Fromage blanc</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="frozen smoothie">
+            <img src="{{ url_for('static', filename='frozen smoothie.jpeg') }}">
+            <p>frozen smoothie</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="frozen vegetables'">
+            <img src="{{ url_for('static', filename='frozen vegetables.jpeg') }}">
+            <p>frozen vegetables</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="grated cheese">
+            <img src="{{ url_for('static', filename='grated cheese.jpeg') }}">
+            <p>grated cheese</p>
+        </label>
+    </div>
+    <div class="image-container">
+        <label>
+            <input type="radio" name="selected_image" value="ground beef">
+            <img src="{{ url_for('static', filename='ground beef.jpeg') }}">
+            <p>ground beef</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="light cream">
+            <img src="{{ url_for('static', filename='light cream.jpeg') }}">
+            <p>light cream</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="milk">
+            <img src="{{ url_for('static', filename='milk.webp') }}">
+            <p>milk</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="olive oil">
+            <img src="{{ url_for('static', filename='olive oil.jpeg') }}">
+            <p>olive oil</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="pasta">
+            <img src="{{ url_for('static', filename='pasta.jpeg') }}">
+            <p>pasta</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="red wine">
+            <img src="{{ url_for('static', filename='red wine.jpeg') }}">
+            <p>red wine</p>
+        </label>
+    </div>
+    <div class="image-container">
+        <label>
+            <input type="radio" name="selected_image" value="shrimp">
+            <img src="{{ url_for('static', filename='shrimp.png') }}">
+            <p>shrimp</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="soup">
+            <img src="{{ url_for('static', filename='soup.jpeg') }}">
+            <p>soup</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="spaghetti">
+            <img src="{{ url_for('static', filename='spaghetti.webp') }}">
+            <p>spaghetti</p>
+        </label>
+        <label>
+            <input type="radio" name="selected_image" value="tomatoes">
+            <img src="{{ url_for('static', filename='tomatoes.jpeg') }}">
+            <p>tomatoes</p>
+        </label>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
